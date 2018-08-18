@@ -2165,23 +2165,23 @@ int64_t GetBlockValue(int nHeight)
 		nSubsidy = GetTreasuryAward(nHeight);
 
 	}else {
-		if (nHeight < 50 && nHeight > 0){ //Genesis Block is 0 then 200k coins per block till 20 - total 5Mil coins premine
+		if (nHeight <= 40 && nHeight > 0){ //Genesis Block is 0 then 200k coins per block till 20 - total 5Mil coins premine
             nSubsidy = 100000 * COIN;
-        }else if (nHeight < 200 && nHeight >= 50){ //PoW stage 0 coins per block till 200
+        }else if (nHeight < 200 && nHeight > 40){ //PoW stage 0 coins per block till 200
 			nSubsidy = 0 * COIN;
-		}else if (nHeight < 50000 && nHeight >= 200) { 
+		}else if (nHeight < 50000 && nHeight > 200) { 
 			nSubsidy = 1 * COIN;
-		}else if (nHeight < 100000 && nHeight >= 50000) { 
+		}else if (nHeight < 100000 && nHeight > 50000) { 
 			nSubsidy = 20 * COIN;
-		}else if (nHeight < 150000 && nHeight >= 100000) { 
+		}else if (nHeight < 150000 && nHeight > 100000) { 
 			nSubsidy = 30 * COIN;
-		}else if (nHeight < 200000 && nHeight >= 150000) { 
+		}else if (nHeight < 200000 && nHeight > 150000) { 
 			nSubsidy = 40 * COIN;
-		}else if (nHeight < 300000 && nHeight >= 200000) { 
+		}else if (nHeight < 300000 && nHeight > 200000) { 
 			nSubsidy = 30 * COIN;
-		}else if (nHeight < 400000 && nHeight >= 300000) { 
+		}else if (nHeight < 400000 && nHeight > 300000) { 
 			nSubsidy = 20 * COIN;
-		}else if (nHeight < 500000 && nHeight >= 400000) { 
+		}else if (nHeight < 500000 && nHeight > 400000) { 
 			nSubsidy = 10 * COIN;
 		}else if (nHeight >= 500000) { 
 			nSubsidy = 5 * COIN;   
@@ -2252,7 +2252,7 @@ int64_t GetTreasuryAward(int nHeight)
     } else if (nHeight < 100000 && nHeight >= 50000) {
 		return 2880 * COIN; //2880 aday at 10% 20 coins per block
 	} else if (nHeight < 150000 && nHeight >= 100000) {
-	return 4320 * COIN; //4320 aday at 10% 85 coins per block
+		return 4320 * COIN; //4320 aday at 10% 85 coins per block
     } else if (nHeight < 200000 && nHeight >= 150000) {
         return 5760 * COIN; //5760 aday at 10% 85 coins per block
     } else if (nHeight < 300000 && nHeight >= 200000) {
@@ -2265,7 +2265,8 @@ int64_t GetTreasuryAward(int nHeight)
         return 720 * COIN; //720 aday at 10% 5 coins per block
     } else {
     }
-return 0;
+	
+	return 0;
 }
 
 
