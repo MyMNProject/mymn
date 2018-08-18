@@ -1,0 +1,30 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/mymn_bg.qm</file>
+        <file alias="ca">locale/mymn_ca.qm</file>
+        <file alias="cs">locale/mymn_cs.qm</file>
+        <file alias="da">locale/mymn_da.qm</file>
+        <file alias="de">locale/mymn_de.qm</file>
+        <file alias="en">locale/mymn_en.qm</file>
+        <file alias="en_US">locale/mymn_en_US.qm</file>
+        <file alias="es">locale/mymn_es.qm</file>
+        <file alias="fi">locale/mymn_fi.qm</file>
+        <file alias="fr_FR">locale/mymn_fr_FR.qm</file>
+        <file alias="hr">locale/mymn_hr.qm</file>
+        <file alias="it">locale/mymn_it.qm</file>
+        <file alias="ja">locale/mymn_ja.qm</file>
+        <file alias="ko_KR">locale/mymn_ko_KR.qm</file>
+        <file alias="nl">locale/mymn_nl.qm</file>
+        <file alias="pl">locale/mymn_pl.qm</file>
+        <file alias="pt">locale/mymn_pt.qm</file>
+        <file alias="pt_BR">locale/mymn_pt_BR.qm</file>
+        <file alias="ro_RO">locale/mymn_ro_RO.qm</file>
+        <file alias="ru">locale/mymn_ru.qm</file>
+        <file alias="sk">locale/mymn_sk.qm</file>
+        <file alias="sv">locale/mymn_sv.qm</file>
+        <file alias="tr">locale/mymn_tr.qm</file>
+        <file alias="uk">locale/mymn_uk.qm</file>
+        <file alias="zh_CN">locale/mymn_zh_CN.qm</file>
+        <file alias="zh_TW">locale/mymn_zh_TW.qm</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Mymn
+Comment=Mymn P2P Cryptocurrency
+Comment[fr]=Mymn, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Mymn, eşten eşe kriptografik sanal para birimi
+Exec=mymn-qt %u
+Terminal=false
+Type=Application
+Icon=mymn128
+MimeType=x-scheme-handler/mymn;
+Categories=Office;Finance;

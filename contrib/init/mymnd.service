@@ -1,0 +1,26 @@
+[Unit]
+Description=Mymn's distributed currency daemon
+After=network.target
+
+[Service]
+User=mymn
+Group=mymn
+
+Type=forking
+PIDFile=/var/lib/mymnd/mymnd.pid
+
+ExecStart=/usr/bin/mymnd -daemon -pid=/var/lib/mymnd/mymnd.pid \
+          -conf=/etc/mymn/mymn.conf -datadir=/var/lib/mymnd
+
+ExecStop=-/usr/bin/mymn-cli -conf=/etc/mymn/mymn.conf \
+         -datadir=/var/lib/mymnd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
