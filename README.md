@@ -54,19 +54,20 @@ More information at [mymn.ga](https://www.mymn.ga) Visit our ANN thread at [Bitc
 <tr><td>Phase 5</td><td>200,001-300,000</td><td>30 MYMN</td><td>75% (22.5 MYMN)</td><td>25% (7.5 MYMN)</td></tr>
 <tr><td>Phase 6</td><td>300,001-400,000</td><td>20 MYMN</td><td>75% (15 MYMN)</td><td>25% (5 MYMN)</td></tr>
 <tr><td>Phase 7</td><td>400,001-500,000</td><td>10 MYMN</td><td>75% (7.5 MYMN)</td><td>25% (2.5 MYMN)</td></tr>
-<tr><td>Phase 8</td><td>500,001+</td><td>5 MYMN</td><td>50% (3.75 MYMN)</td><td>25% (1.25 MYMN)</td></tr>
+<tr><td>Phase 8</td><td>500,001+</td><td>5 MYMN</td><td>75% (3.75 MYMN)</td><td>25% (1.25 MYMN)</td></tr>
 </table>
+
 ### Dev Fee Breakdown
 
 <table>
-<th>Phase</th><th>Block Height</th><th>Dev Fees Per day(24hr)</th><td>Per Block</td>
-<tr><td>Phase 1</td><td>201-50,000</td><td>0 MYMN</td></th><td>0</td>
-<tr><td>Phase 2</td><td>50,000-100,000</td><td>2880 MYMN</td><td>2</td>
-<tr><td>Phase 3</td><td>100,001-150,000</td><td>4320 MYMN</td><td>3</td>
-<tr><td>Phase 4</td><td>150,001-200,000</td><td>5760 MYMN</td><td>4</td>
-<tr><td>Phase 5</td><td>200,001-300,000</td><td>4320 MYMN</td><td>3</td>
-<tr><td>Phase 6</td><td>300,001-400,000</td><td>2880 MYMN</td><td>2</td>
-<tr><td>Phase 7</td><td>400,001-500,000</td><td>1440 MYMN</td><td>1</td>
-<tr><td>Phase 8</td><td>500,001+</td><td>720 MYMN</td><td>0.5</td>
+<th>Phase</th><th>Block Height</th><th>Dev Fees Per day(24hr)</th><th>Per Block</th>
+<tr><td>Phase 1</td><td>201-50,000</td><td>0 MYMN</td></th><td>0 MYMN</td>
+<tr><td>Phase 2</td><td>50,000-100,000</td><td>2880 MYMN</td><td>2 MYMN</td>
+<tr><td>Phase 3</td><td>100,001-150,000</td><td>4320 MYMN</td><td>3 MYMN</td>
+<tr><td>Phase 4</td><td>150,001-200,000</td><td>5760 MYMN</td><td>4 MYMN</td>
+<tr><td>Phase 5</td><td>200,001-300,000</td><td>4320 MYMN</td><td>3 MYMN</td>
+<tr><td>Phase 6</td><td>300,001-400,000</td><td>2880 MYMN</td><td>2 MYMN</td>
+<tr><td>Phase 7</td><td>400,001-500,000</td><td>1440 MYMN</td><td>1 MYMN</td>
+<tr><td>Phase 8</td><td>500,001+</td><td>720 MYMN</td><td>0.5 MYMN</td>
 </table>
 
