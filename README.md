@@ -29,27 +29,42 @@ More information at [mymn.ga](https://www.mymn.ga) Visit our ANN thread at [Bitc
 <table>
 <th colspan=4>PoW Phase</th>
 <tr><th>Block Height</th><th>Reward Amount</th><th>Notes</th><th>Duration (Days)</th></tr>
-<tr><td>1</td><td>1,000,000 MYMN</td><td>Initial Premine</td><td>0 Days</td></tr>
+<tr><td>1</td><td>4,000,000 MYMN</td><td>Initial Premine</td><td>0 Days</td></tr>
 <tr><td>2-200</td><td>100 MYMN</td><td rowspan=1>Open Mining</td><td rowspan=1> Approx 1 Day</td></tr>
 <tr><th colspan=4>PoS Phase</th></tr>
 <tr><th>Block Height</th><th colspan=3>Reward Amount</th></tr>
-<tr><td>201-</td><td colspan=2>Masternodes: 50%</td><td>Stakers: 50%</td></tr>
+<tr><td>201-</td><td colspan=2>Masternodes: 75%</td><td>Stakers: 25%</td></tr>
 </table>
 
 ### PoW Rewards Breakdown
 
 <table>
 <th>Block Height</th><th>Reward</th><th>Masternodes</th><th>Miner</th>
-<tr><td>2-200</td><td>100 MYMN</td><td>0 MYMN</td><td100% (100 MYMN)</td><td100% (100 MYMN)</td></tr>
+<tr><td>2-200</td><td>0 MYMN</td><td>0 MYMN</td><td100% (100 MYMN)</td><td100% (100 MYMN)</td></tr>
 </table>
 
 ### PoS Rewards Breakdown
 
 <table>
 <th>Phase</th><th>Block Height</th><th>Reward</th><th>Masternodes</th><th>Stakers</th>
-<tr><td>Phase 1</td><td>201-200,000</td><td>5 MYMN</td><td>50% (2.5 MYMN)</td><td>50% (2.5 MYMN)</td></tr>
-<tr><td>Phase 2</td><td>200,000-300,000</td><td>2.5 MYMN</td><td>50% (1.25 MYMN)</td><td>50% (1.25 MYMN)</td></tr>
-<tr><td>Phase 3</td><td>300,001-400,000</td><td>1.25 MYMN</td><td>50% (0.625 MYMN)</td><td>50% (0.625 MYMN)</td></tr>
-<tr><td>Phase 4</td><td>400,001-</td><td>0.625 MYMN</td><td>50% (0.3125 MYMN)</td><td>50% (0.3125 MYMN)</td></tr>
+<tr><td>Phase 1</td><td>201-50,000</td><td>1 MYMN</td><td>75% (0.75 MYMN)</td><td>25% (0.25 MYMN)</td></tr>
+<tr><td>Phase 2</td><td>50,000-100,000</td><td>20 MYMN</td><td>75% (15 MYMN)</td><td>25% (5 MYMN)</td></tr>
+<tr><td>Phase 3</td><td>100,001-150,000</td><td>30 MYMN</td><td>75% (22.5 MYMN)</td><td>25% (7.5 MYMN)</td></tr>
+<tr><td>Phase 3</td><td>150,001-200,000</td><td>40 MYMN</td><td>75% (30 MYMN)</td><td>25% (10 MYMN)</td></tr>
+<tr><td>Phase 3</td><td>200,001-300,000</td><td>30 MYMN</td><td>75% (22.5 MYMN)</td><td>25% (7.5 MYMN)</td></tr>
+<tr><td>Phase 3</td><td>300,001-400,000</td><td>20 MYMN</td><td>75% (15 MYMN)</td><td>25% (5 MYMN)</td></tr>
+<tr><td>Phase 3</td><td>400,001-500,000</td><td>10 MYMN</td><td>75% (7.5 MYMN)</td><td>25% (2.5 MYMN)</td></tr>
+<tr><td>Phase 4</td><td>500,001+</td><td>5 MYMN</td><td>50% (3.75 MYMN)</td><td>25% (1.25 MYMN)</td></tr>
 </table>
-# MYMN
+### Dev Fee Breakdown
+
+<table>
+<th>Phase</th><th>Block Height</th><th>Reward</th><th>Masternodes</th><th>Stakers</th>
+<tr><td>Phase 1</td><td>201-50,000</td><td>5 MYMN</td><td>75% (2.5 MYMN)</td><td>25% (2.5 MYMN)</td></tr>
+<tr><td>Phase 2</td><td>50,000-100,000</td><td>2.5 MYMN</td><td>75% (1.25 MYMN)</td><td>25% (1.25 MYMN)</td></tr>
+<tr><td>Phase 3</td><td>100,001-150,000</td><td>1.25 MYMN</td><td>75% (0.625 MYMN)</td><td>25% (0.625 MYMN)</td></tr>
+<tr><td>Phase 3</td><td>150,001-200,000</td><td>1.25 MYMN</td><td>75% (0.625 MYMN)</td><td>25% (0.625 MYMN)</td></tr>
+<tr><td>Phase 3</td><td>300,001-400,000</td><td>1.25 MYMN</td><td>75% (0.625 MYMN)</td><td>25% (0.625 MYMN)</td></tr>
+<tr><td>Phase 4</td><td>400,001-</td><td>0.625 MYMN</td><td>50% (0.3125 MYMN)</td><td>25% (0.3125 MYMN)</td></tr>
+</table>
+
