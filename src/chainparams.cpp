@@ -56,7 +56,7 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x00000e54eac2c595dce156f5f30f7c8896fb4fc613c3a1ba341cfdea5313894e"));
+    (0, uint256("0x42c6c1e7eb1e21518041fd49204dda7fc620ce25a9332711c1007f372da6bb3d"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
     1535261455, // * UNIX timestamp of last checkpoint block
@@ -170,7 +170,7 @@ public:
 			
 		printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
         printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
-        assert(hashGenesisBlock == uint256("0x00000e54eac2c595dce156f5f30f7c8896fb4fc613c3a1ba341cfdea5313894e"));
+        assert(hashGenesisBlock == uint256("0x42c6c1e7eb1e21518041fd49204dda7fc620ce25a9332711c1007f372da6bb3d"));
         assert(genesis.hashMerkleRoot == uint256("0x7f1ed91786d6a81cd2a6c4f32b3a3b1cec0f7f14ac388bc8c72d8dcfc415ff28"));
       
 	vSeeds.push_back(CDNSSeedData("139.99.197.112", "139.99.197.112"));       // Single node address
@@ -383,7 +383,7 @@ public:
     {
         networkID = CBaseChainParams::UNITTEST;
         strNetworkID = "unittest";
-        nDefaultPort = 62443;
+        nDefaultPort = 11361;
         vFixedSeeds.clear(); //! Unit test mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Unit test mode doesn't have any DNS seeds.
 
