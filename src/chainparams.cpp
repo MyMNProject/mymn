@@ -56,10 +56,10 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x42c6c1e7eb1e21518041fd49204dda7fc620ce25a9332711c1007f372da6bb3d"));
+    (0, uint256("0x9c661341062791ebc601c5082842642df88f6462f6378a51cc5ec0a5e4c37060"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1535261455, // * UNIX timestamp of last checkpoint block
+    1535281112, // * UNIX timestamp of last checkpoint block
     0,    // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
@@ -99,7 +99,7 @@ public:
     CMainParams()
     {
         networkID = CBaseChainParams::MAIN;
-		vTreasuryRewardAddress = ""; //Fill in address once wallet generated
+		vTreasuryRewardAddress = "XVko5C9BgTqHyypZeLjCHocTadkbdbY6vG"; //Fill in address once wallet generated
         strNetworkID = "main";
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -130,7 +130,7 @@ public:
         nModifierUpdateBlock = 999999999;
         nZerocoinStartHeight = 201;
         nAccumulatorStartHeight = 1;
-        nZerocoinStartTime = 1535261455; // 2018-01-14T16:04:58
+        nZerocoinStartTime = 1535281112; // 2018-01-14T16:04:58
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
         nBlockRecalculateAccumulators = ~1; //Trigger a recalculation of accumulators
         nBlockFirstFraudulent = ~1; //First block that bad serials emerged
@@ -159,9 +159,9 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1535261455;
+        genesis.nTime = 1535281112;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 36699;
+        genesis.nNonce = 1388645;
    
         //printf("genesis.hashMerkleRoot->%s\n",genesis.hashMerkleRoot.ToString().c_str());
 				
@@ -170,7 +170,7 @@ public:
 			
 		printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
         printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
-        assert(hashGenesisBlock == uint256("0x42c6c1e7eb1e21518041fd49204dda7fc620ce25a9332711c1007f372da6bb3d"));
+        assert(hashGenesisBlock == uint256("0x9c661341062791ebc601c5082842642df88f6462f6378a51cc5ec0a5e4c37060"));
         assert(genesis.hashMerkleRoot == uint256("0x7f1ed91786d6a81cd2a6c4f32b3a3b1cec0f7f14ac388bc8c72d8dcfc415ff28"));
       
 	vSeeds.push_back(CDNSSeedData("139.99.197.112", "139.99.197.112"));       // Single node address
@@ -199,7 +199,7 @@ public:
         nPoolMaxTransactions = 3;
         strSporkKey = "0483ac0d61a09b145ecf6e6d2846636b123558b1cba54b7165aaeebc828c2dfda323a8067e9da9c39d0c4b0a863bc95a5fb56f02a90240508f5ffb24b9c3eff0a4";
         strObfuscationPoolDummyAddress = "XCNAsFGy8k7amqRG26ikKyfVDwK8585Z6b";
-        nStartMasternodePayments = 1535261455; //Wed, 25 Jun 2014 20:36:16 GMT
+        nStartMasternodePayments = 1535281112; //Wed, 25 Jun 2014 20:36:16 GMT
 
         /** Zerocoin */
         zerocoinModulus = "0xc95577b6dce0049b0a20c779af38079355abadde1a1d80c353f6cb697a7ae5a087bad39caa5798478551d0f9d91e6267716506f32412de1d19d17588765eb9502b85c6a18abdb05791cfd8b734e960281193705eeece210920cc922b3af3ceb178bf12c22eb565d5767fbf19545639be8953c2c38ffad41f3371e4aac750ac2d7bd614b3faabb453081d5d88fdbb803657a980bc93707e4b14233a2358c97763bf28f7c933206071477e8b371f229bc9ce7d6ef0ed7163aa5dfe13bc15f7816348b328fa2c1e69d5c88f7b94cee7829d56d1842d77d7bb8692e9fc7b7db059836500de8d57eb43c345feb58671503b932829112941367996b03871300f25efb5";
