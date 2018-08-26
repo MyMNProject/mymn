@@ -7,6 +7,7 @@
 #include <QLineEdit>
 #include <QMessageBox>
 #include <boost/lexical_cast.hpp>
+#include <STyle>
 
 using namespace std;
 using namespace boost;
