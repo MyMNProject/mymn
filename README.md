@@ -9,9 +9,9 @@ Mymn is a cutting edge cryptocurrency, with many features not available in most 
 - Fast transactions featuring guaranteed zero confirmation transactions, PIVX named it _SwiftX_.
 - Decentralized blockchain voting providing for consensus based advancement of the current Masternode
   technology used to secure the network and provide the above features, each Masternode is secured
-  with a collateral of 1000 MYMN.
+  with a collateral of 20000 MYMN.
 
-More information at [mymn.ga](https://www.mymn.ga) Visit our ANN thread at [BitcoinTalk](http://www.bitcointalk.org/index.php)
+More information at [mymn.cf](https://www.mymn.ga) Visit our ANN thread at [BitcoinTalk](http://www.bitcointalk.org/index.php)
 
 
 ### Coin Specs
@@ -30,7 +30,7 @@ More information at [mymn.ga](https://www.mymn.ga) Visit our ANN thread at [Bitc
 <th colspan=4>PoW Phase</th>
 <tr><th>Block Height</th><th>Reward Amount</th><th>Notes</th><th>Duration (Days)</th></tr>
 <tr><td>1</td><td>4,000,000 MYMN</td><td>Initial Premine</td><td>0 Days</td></tr>
-<tr><td>2-200</td><td>100 MYMN</td><td rowspan=1>Open Mining</td><td rowspan=1> Approx 1 Day</td></tr>
+<tr><td>2-200</td><td>100 MYMN</td><td rowspan=1>Closed Mining</td><td rowspan=1> Approx 1 Day</td></tr>
 <tr><th colspan=4>PoS Phase</th></tr>
 <tr><th>Block Height</th><th colspan=3>Reward Amount</th></tr>
 <tr><td>201-</td><td colspan=2>Masternodes: 75%</td><td>Stakers: 25%</td></tr>
