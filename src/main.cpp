@@ -2119,45 +2119,12 @@ double ConvertBitsToDouble(unsigned int nBits)
 
 int64_t GetBlockValue(int nHeight)
 {
-	// Old XXX values
-	/*
-    int64_t nSubsidy = 0;
-
-    if (Params().NetworkID() == CBaseChainParams::TESTNET) {
-        if (nHeight < 200 && nHeight > 0)
-            return 250000 * COIN;
-    }
-
-    if (nHeight == 0) {
-        nSubsidy = 20000000 * COIN;
-    } else if (nHeight < 135000 && nHeight > 0) {
-        nSubsidy = 100 * COIN;
-    } else if (nHeight < 390000 && nHeight >= 135000) {
-        nSubsidy = 80 * COIN;
-    } else if (nHeight < 800000 && nHeight >= 390000) {
-        nSubsidy = 50 * COIN;
-	} else if (nHeight < 1500000 && nHeight >= 800000) {
-        nSubsidy = 20 * COIN;
-    } else if (nHeight >= 1500000) {
-        nSubsidy = 10 * COIN;
-    } else {
-        nSubsidy = 0 * COIN;
-    }
-    return nSubsidy;
-	*/
-	
 	// MyMN Values
 	int64_t nSubsidy = 0;
 
-	if (Params().NetworkID() == CBaseChainParams::TESTNET) {
-		
-		if (nHeight == 0) {
-			nSubsidy = 4000000 * COIN; //Genesis 4 millions coins for swap
-		}else if (nHeight < 200 && nHeight > 0) { //POW phase 200 coins in this phase
-			nSubsidy = 1 * COIN;
-		}else if (nHeight < 25000 && nHeight > 200) { //Public phase 17.22 days 24,800 coins 
-			nSubsidy = 1 * COIN;
-		}
+	if (Params().NetworkID() == CBaseChainParams::TESTNET) {	
+		if (nHeight < 10000000000000 && nHeight > 0)
+		return 100 * COIN;
 	}
 
 	if (IsTreasuryBlock(nHeight)) {
@@ -2165,25 +2132,25 @@ int64_t GetBlockValue(int nHeight)
 		nSubsidy = GetTreasuryAward(nHeight);
 
 	}else {
-		if (nHeight <= 40 && nHeight > 0){ //Genesis Block is 0 then 200k coins per block till 20 - total 5Mil coins premine
-            nSubsidy = 100000 * COIN;
-        }else if (nHeight < 200 && nHeight > 40){ //PoW stage 0 coins per block till 200
+		if (nHeight <= 40 && nHeight > 0){ //Genesis Block is 0 then 100k coins per block till 20 - total 5Mil coins premine
+            nSubsidy = 100000 * COIN;  // 4mil coins 100k*40 blocks for coins swap assuming 3m coins being swapped over and 1m for 2x500k staking(pos miners)
+        }else if (nHeight <= 200 && nHeight > 40){ //PoW stage 0 coins per block till 200
 			nSubsidy = 0 * COIN;
-		}else if (nHeight < 50000 && nHeight > 200) { 
+		}else if (nHeight <= 50000 && nHeight > 200) { 
 			nSubsidy = 1 * COIN;
-		}else if (nHeight < 100000 && nHeight > 50000) { 
+		}else if (nHeight <= 100000 && nHeight > 50000) { 
 			nSubsidy = 20 * COIN;
-		}else if (nHeight < 150000 && nHeight > 100000) { 
+		}else if (nHeight <= 150000 && nHeight > 100000) { 
 			nSubsidy = 30 * COIN;
-		}else if (nHeight < 200000 && nHeight > 150000) { 
+		}else if (nHeight <= 200000 && nHeight > 150000) { 
 			nSubsidy = 40 * COIN;
-		}else if (nHeight < 300000 && nHeight > 200000) { 
+		}else if (nHeight <= 300000 && nHeight > 200000) { 
 			nSubsidy = 30 * COIN;
-		}else if (nHeight < 400000 && nHeight > 300000) { 
+		}else if (nHeight <= 400000 && nHeight > 300000) { 
 			nSubsidy = 20 * COIN;
-		}else if (nHeight < 500000 && nHeight > 400000) { 
+		}else if (nHeight <= 500000 && nHeight > 400000) { 
 			nSubsidy = 10 * COIN;
-		}else if (nHeight >= 500000) { 
+		}else if (                     nHeight > 500000) { 
 			nSubsidy = 5 * COIN;   
 		}
 		int64_t nMoneySupply = chainActive.Tip()->nMoneySupply;
@@ -2208,12 +2175,10 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
 	
 	// 75% for Masternodes
 	if (nHeight == 0) {
-	      ret = blockValue  / 100 * 0;
-	} else if (nHeight > 1) {
+	      ret = blockValue * 0;
+	} else if (nHeight > 200) {
 		  ret = blockValue  / 100 * 75;
-		
 	}
-			
 	
     return ret;
 }
