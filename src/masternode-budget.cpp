@@ -1,6 +1,6 @@
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2017-2018 The Mymn developers
+// Copyright (c) 2018 The MyMN developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -553,7 +553,7 @@ void CBudgetManager::FillBlockPayee(CMutableTransaction& txNew, CAmount nFees, b
     }
 }
 
-// dev fee
+
 void CBudgetManager::FillTreasuryBlockPayee(CMutableTransaction& txNew, CAmount nFees, bool fProofOfStake) 
 {
     CBlockIndex* pindexPrev = chainActive.Tip();
@@ -564,12 +564,12 @@ void CBudgetManager::FillTreasuryBlockPayee(CMutableTransaction& txNew, CAmount 
     CAmount treasurePayment = blockValue - 10 * COIN;
     if (fProofOfStake)
     {
-        +/**For Proof Of Stake vout[0] must be null
+        /**For Proof Of Stake vout[0] must be null
 		 * Stake reward can be split into many different outputs, so we must
 		 * use vout.size() to align with several different cases.
 		 * An additional output is appended as the masternode payment
 		 */
-            unsigned int i = txNew.vout.size();
+        unsigned int i = txNew.vout.size();
         txNew.vout.resize(i + 1);
         txNew.vout[i].scriptPubKey = payee;
         txNew.vout[i].nValue = treasurePayment;
