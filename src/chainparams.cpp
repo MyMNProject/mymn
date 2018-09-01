@@ -99,7 +99,7 @@ public:
     CMainParams()
     {
         networkID = CBaseChainParams::MAIN;
-		vTreasuryRewardAddress = ""; //Fill in address once wallet generated
+		vTreasuryRewardAddress = "XYmYLuvbEFjtrZALFpXcvXxLsji58r5jDh"; //Fill in address once wallet generated
         strNetworkID = "main";
         /**
          * The message start string is designed to be unlikely to occur in normal data.
