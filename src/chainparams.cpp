@@ -99,7 +99,7 @@ public:
     CMainParams()
     {
         networkID = CBaseChainParams::MAIN;
-		vTreasuryRewardAddress = "XVko5C9BgTqHyypZeLjCHocTadkbdbY6vG"; //Fill in address once wallet generated
+		vTreasuryRewardAddress = ""; //Fill in address once wallet generated
         strNetworkID = "main";
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -146,9 +146,8 @@ public:
          *     CTxOut(nValue=50.00000000, scriptPubKey=0xA9037BAC7050C479B121CF)
          *   vMerkleTree: e0028e
          */
-        const char* pszTimestamp = "Self Masternode hosting service MyMN!";
+        const char* pszTimestamp = "Self Masternode hosting service MyMN coin officially commenced!";
 
-	//const char* pszTimestamp = "The Guardian Mar 23 2018 UK interest rates stay on hold but Bank of England hints at rise - Remapper";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -281,8 +280,6 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        //vSeeds.push_back(CDNSSeedData("45.76.61.28", "207.148.0.129"));         // Single node address
-        //vSeeds.push_back(CDNSSeedData("209.250.240.94", "45.77.239.30"));       // Single node address
         vSeeds.push_back(CDNSSeedData("139.99.197.112", "139.99.197.112"));       // Single node address
 		
 
