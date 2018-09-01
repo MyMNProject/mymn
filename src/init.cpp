@@ -1613,8 +1613,8 @@ bool AppInit2(boost::thread_group& threadGroup)
         }
         fVerifyingBlocks = false;
 
-        bool fEnableZXxxBackups = GetBoolArg("-backupzmymn", true);
-        pwalletMain->setZXxxAutoBackups(fEnableZXxxBackups);
+        bool fEnableZMymnBackups = GetBoolArg("-backupzmymn", true);
+        pwalletMain->setZMymnAutoBackups(fEnableZMymnBackups);
     }  // (!fDisableWallet)
 #else  // ENABLE_WALLET
     LogPrintf("No wallet compiled in!\n");

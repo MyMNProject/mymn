@@ -474,21 +474,21 @@
                 <number>0</number>
                </property>
                <item>
-                <widget class="QPushButton" name="pushButtonZXxxControl">
+                <widget class="QPushButton" name="pushButtonZMymnControl">
                  <property name="text">
                   <string>zMymn Control</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="labelzXxxSelected">
+                <widget class="QLabel" name="labelzMymnSelected">
                  <property name="text">
                   <string>zMymn Selected:</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="labelzXxxSelected_int">
+                <widget class="QLabel" name="labelzMymnSelected_int">
                  <property name="text">
                   <string>0</string>
                  </property>

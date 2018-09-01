@@ -281,16 +281,16 @@ void PrivacyDialog::on_pushButtonSpendzMYMN_clicked()
     sendzMYMN();
 }
 
-void PrivacyDialog::on_pushButtonZXxxControl_clicked()
+void PrivacyDialog::on_pushButtonZMymnControl_clicked()
 {
-    ZXxxControlDialog* zXxxControl = new ZXxxControlDialog(this);
-    zXxxControl->setModel(walletModel);
-    zXxxControl->exec();
+    ZMymnControlDialog* zMymnControl = new ZMymnControlDialog(this);
+    zMymnControl->setModel(walletModel);
+    zMymnControl->exec();
 }
 
-void PrivacyDialog::setZXxxControlLabels(int64_t nAmount, int nQuantity)
+void PrivacyDialog::setZMymnControlLabels(int64_t nAmount, int nQuantity)
 {
-    ui->labelzXxxSelected_int->setText(QString::number(nAmount));
+    ui->labelzMymnSelected_int->setText(QString::number(nAmount));
     ui->labelQuantitySelected_int->setText(QString::number(nQuantity));
 }
 
@@ -398,8 +398,8 @@ void PrivacyDialog::sendzMYMN()
 
     // use mints from zMymn selector if applicable
     vector<CZerocoinMint> vMintsSelected;
-    if (!ZXxxControlDialog::listSelectedMints.empty()) {
-        vMintsSelected = ZXxxControlDialog::GetSelectedMints();
+    if (!ZMymnControlDialog::listSelectedMints.empty()) {
+        vMintsSelected = ZMymnControlDialog::GetSelectedMints();
     }
 
     // Spend zMYMN
@@ -435,7 +435,7 @@ void PrivacyDialog::sendzMYMN()
     }
 
     // Clear zmymn selector in case it was used
-    ZXxxControlDialog::listSelectedMints.clear();
+    ZMymnControlDialog::listSelectedMints.clear();
 
     // Some statistics for entertainment
     QString strStats = "";
