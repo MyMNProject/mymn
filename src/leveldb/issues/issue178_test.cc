@@ -22,7 +22,7 @@ std::string Key1(int i) {
 }
 
 std::string Key2(int i) {
-  return Key1(i) + "_mymn";
+  return Key1(i) + "_xxx";
 }
 
 class Issue178 { };

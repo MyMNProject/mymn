@@ -243,11 +243,11 @@ TEST(LogTest, ReadWrite) {
   Write("foo");
   Write("bar");
   Write("");
-  Write("mymnx");
+  Write("xxxx");
   ASSERT_EQ("foo", Read());
   ASSERT_EQ("bar", Read());
   ASSERT_EQ("", Read());
-  ASSERT_EQ("mymnx", Read());
+  ASSERT_EQ("xxxx", Read());
   ASSERT_EQ("EOF", Read());
   ASSERT_EQ("EOF", Read());  // Make sure reads at eof work
 }
