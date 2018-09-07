@@ -2132,28 +2132,20 @@ int64_t GetBlockValue(int nHeight)
 		nSubsidy = GetTreasuryAward(nHeight);
 
 	}else {
-		if (nHeight <= 70 && nHeight > 0){ //Genesis Block is 0 then 100k coins per block till 20 - total 5Mil coins premine
-            nSubsidy = 100000 * COIN;  // 7mil coins 100k*70 blocks for coins swap assuming 6m coins being swapped over and 1m for 2x500k staking(pos miners)
-        }else if (nHeight <= 200 && nHeight > 70){ //PoW stage 0 coins per block till 200
+		if (nHeight <= 8 && nHeight > 0){ //Genesis Block is 0
+            nSubsidy = 1000000 * COIN;  // 8mil coins 1m * 8 blocks for coins swap assuming 7m coins being swapped over and 1m for 2x500k staking(pos miners)
+        }else if (nHeight <= 200 && nHeight > 8){ //PoW stage 0 coins per block till 200
 			nSubsidy = 0 * COIN;
-		}else if (nHeight <= 25000 && nHeight > 200) { 
-			nSubsidy = 1 * COIN;  // first reward is 1 coins
-		}else if (nHeight <= 100000 && nHeight > 25000) {
-			nSubsidy = 10 * COIN; // reward is 10 coins
-		}else if (nHeight <= 100000 && nHeight > 50000) { 
-			nSubsidy = 20 * COIN; // reward is 20 coins , dev fee kicks in at this point
-		}else if (nHeight <= 150000 && nHeight > 100000) { 
+		}else if (nHeight <= 7500 && nHeight > 200) { 
+			nSubsidy = 1 * COIN;  // first reward is 1 coins , small rewards to get community mn on network
+		}else if (nHeight <= 100000 && nHeight > 7500) {
+			nSubsidy = 120 * COIN; // reward is 120 coins
+		}else if (nHeight <= 400000 && nHeight > 100000) { 
+			nSubsidy = 60 * COIN; // reward is 60 coins
+		}else if (nHeight <= 1600000 && nHeight > 400000) { 
 			nSubsidy = 30 * COIN; // reward is 30 coins
-		}else if (nHeight <= 200000 && nHeight > 150000) { 
-			nSubsidy = 40 * COIN; // reward is 40 coins
-		}else if (nHeight <= 300000 && nHeight > 200000) { 
-			nSubsidy = 30 * COIN; // reward is 30 coins
-		}else if (nHeight <= 400000 && nHeight > 300000) { 
-			nSubsidy = 20 * COIN; // reward is 20 coins
-		}else if (nHeight <= 500000 && nHeight > 400000) { 
-			nSubsidy = 10 * COIN; // reward is 10 coins
-		}else if (                     nHeight > 500000) { 
-			nSubsidy = 5 * COIN;  // final reward is 5 coins to max supply
+		}else if (                     nHeight > 1600000) { 
+			nSubsidy = 15 * COIN;  // final reward is 15 coins to max supply which is aprox.  block 4132847.
 		}
 		int64_t nMoneySupply = chainActive.Tip()->nMoneySupply;
 
@@ -2175,19 +2167,18 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
             return 0;
     }
 	
-	// 75% for Masternodes
+	// 65% for Masternodes
 	if (nHeight == 0) {
 	      ret = blockValue * 0;
 	} else if (nHeight > 200) {
-		  ret = blockValue  / 100 * 75;
+		  ret = blockValue  / 100 * 65;
 	}
 	
     return ret;
 }
 
 //Treasury blocks start from 50,000 and then 1440 blocks after/ 1440 is 1 day equivalent
-//int nStartTreasuryBlock = 50000; // live dev fee 
-int nStartTreasuryBlock = 500; // test dev fee at 500 blocks
+int nStartTreasuryBlock = 50000; // live dev fee 
 int nTreasuryBlockStep = 1440;   // 60*24
 bool IsTreasuryBlock(int nHeight)
 {
@@ -2200,69 +2191,21 @@ bool IsTreasuryBlock(int nHeight)
 }
 int64_t GetTreasuryAward(int nHeight)
 {
-	/*
+	// LIVE REWARDS
     if (IsTreasuryBlock(nHeight)) {
-        return COIN * 2880; //10 coins go to stakers per day
-    } else if (nHeight > 100000 && nHeight <= 50000) { // (1,440 * BlockRewards) * .05 = 2,160 per day (block rewards at 60)
-        return COIN * 2170; //
-    } else if (nHeight > 50000 && nHeight <= 100000) { // (1,440 * BlockRewards) * .05 = 1,440 per day 
-        return COIN * 1450;  //10 coins go to stakers
-    } else if (nHeight >= 100000) {
-        return COIN * 1450;//10 coins go to stakers
+        return COIN * 17280; //10 coins go to stakers per day 17280 on first block
+    } else if (nHeight <= 100000 && nHeight > 50000) { 
+        return COIN * 17280; //								// (1,440 * BlockRewards(120) ) * .1 = 17280 per day
+    } else if (nHeight <= 400000 && nHeight > 100000) { 
+        return COIN * 8640;  //10 coins go to stakers  		// (1,440 * BlockRewards(60) ) * .1 = 8640 per day 
+	} else if (nHeight <= 1600000 && nHeight > 400000) { 
+        return COIN * 4320;  //10 coins go to stakers  		// (1,440 * BlockRewards(30) ) * .1 = 4320 per day 
+    } else if (						 nHeight > 1600000) {	
+        return COIN * 2160;//10 coins go to stakers    		// (1,440 * BlockRewards(15) ) * .1 = 2160 per day 
     } else {
     }
     return 0;	
-	*/
-	
-	// MyMn live settings
-	/*
-	if (IsTreasuryBlock(nHeight)) {
-        return 2880 * COIN; //2880 on very first block (1,440 * BlockRewards) * .1 = 2,880 per day (block rewards at 20) reward are: 20,30,40,30,20,10,5
-    } else if (nHeight <= 100000 && nHeight > 50000) {
-		return 2880 * COIN; //2880 aday at 10% 20 coins per block - actual coins received is 2880-10(has to pay stakers 10coins to make it work) = 2870
-	} else if (nHeight <= 150000 && nHeight > 100000) {
-		return 4320 * COIN; //4320 aday at 10% 30 coins per block
-    } else if (nHeight <= 200000 && nHeight > 150000) {
-        return 5760 * COIN; //5760 aday at 10% 40 coins per block
-    } else if (nHeight <= 300000 && nHeight > 200000) {
-        return 4320 * COIN; //4320 aday at 10% 30 coins per block
-    } else if (nHeight <= 400000 && nHeight > 300000) {
-        return 2880 * COIN; //2880 aday at 10% 20 coins per block
-    } else if (nHeight <= 500000 && nHeight > 400000) {
-        return 1440 * COIN; //1440 aday at 10% 10 coins per block
-    } else if (                     nHeight > 500000) {
-        return 720 * COIN; //720 aday at 10% 5 coins per block
-    } else {
-    }
-	*/
-	
-	// Mymn test settings start at block 500
-	if (IsTreasuryBlock(nHeight)) {
-			return 144 * COIN; //144 on very first block  0.1(10%) x 1rewards/block x 1440 = 144
 		
-	} else if (nHeight <= 25000 && nHeight > 500) { // 500blocks FOR FINAL TESTING
-		return 144 * COIN; //144 aday at 10% 1 coins per block - actual coins received is 144-10(has to pay stakers 10coins to make it work)
-	} else if (nHeight <= 50000 && nHeight > 25000) {
-		return 1440 * COIN; //1440 aday at 10% 10 coins per block
-	} else if (nHeight <= 75000 && nHeight > 50000) {
-        return 2880 * COIN; //2880 on very first block (1,440 * BlockRewards) * .1 = 2,880 per day (block rewards at 20) reward are: 20,30,40,30,20,10,5{
-	} else if (nHeight <= 150000 && nHeight > 100000) {
-		return 4320 * COIN; //4320 aday at 10% 30 coins per block
-    } else if (nHeight <= 200000 && nHeight > 150000) {
-        return 5760 * COIN; //5760 aday at 10% 40 coins per block
-    } else if (nHeight <= 300000 && nHeight > 200000) {
-        return 4320 * COIN; //4320 aday at 10% 30 coins per block
-    } else if (nHeight <= 400000 && nHeight > 300000) {
-        return 2880 * COIN; //2880 aday at 10% 20 coins per block
-    } else if (nHeight <= 500000 && nHeight > 400000) {
-        return 1440 * COIN; //1440 aday at 10% 10 coins per block
-    } else if (                    nHeight > 500000) {
-        return 720 * COIN; //720 aday at 10% 5 coins per block
-    } else {
-		
-    }
-	
-	return 0;
 }
 
 
