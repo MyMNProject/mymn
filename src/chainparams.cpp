@@ -173,7 +173,7 @@ public:
         assert(genesis.hashMerkleRoot == uint256("0xe6d4c84eecc634caec7d935cba024242edcea67e99887cb3124250ea4cb043b8"));
       
 	
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 52); // M
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 50); // M
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 30); // D for devfunds Prefix
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 212);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x02)(0x2D)(0x25)(0x33).convert_to_container<std::vector<unsigned char> >();
@@ -194,7 +194,7 @@ public:
         fHeadersFirstSyncingActive = false;
 
         nPoolMaxTransactions = 3;
-        strSporkKey = "0298be12a902dd085e0b6b66acc46428db66966b8f85ffd12781e41a120059d508";
+        strSporkKey = "0220fs12a902dd085e0b6b66acc46428db66966b8f85ffd12781e41a120059d300";
         strObfuscationPoolDummyAddress = "XCNAsFGy8k7amqRG26ikKyfVDwK8585Z6b";
         nStartMasternodePayments = 1536279940; //Wed, 25 Jun 2014 20:36:16 GMT
 
