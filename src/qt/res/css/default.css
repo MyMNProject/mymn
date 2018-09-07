@@ -163,7 +163,7 @@ background-color:#f2f2f2;
 /****************************************************************************************/
 
 QPushButton { /* Global Button Style */
-background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: .01 #f3a10f, stop: .1 #0184CC, stop: .95 #0184CC, stop: 1 #f3a10f);
+background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: .01 #f22c2c, stop: .1 #0184CC, stop: .95 #0184CC, stop: 1 #f22c2c);
 border:0;
 border-radius:3px;
 color:#ffffff;
@@ -176,7 +176,7 @@ padding-bottom:5px;
 }
 
 QPushButton:hover {
-background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: .01 #f3a90f, stop: .1 #f39910, stop: .95 #f39910, stop: 1 #f3a90f);
+background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: .01 #f22c2c, stop: .1 #f22c2c, stop: .95 #f22c2c, stop: 1 #f22c2c);
 }
 
 QPushButton:focus {
@@ -707,7 +707,7 @@ background-color:#0184CC;
 }
 
 QWidget#PrivacyDialog QPushButton {
-background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: .01 #cf8107, stop: .1 #0184CC, stop: .95 #0184CC, stop: 1 #e28901);
+background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: .01 #f22c2c, stop: .1 #0184CC, stop: .95 #0184CC, stop: 1 #e28901);
 border:0;
 border-radius:3px;
 color:#ffffff;
@@ -720,7 +720,7 @@ padding-bottom:5px;
 }
 
 QWidget#PrivacyDialog QPushButton:hover {
-background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: .01 #f3a90f, stop: .1 #f39910, stop: .95 #f39910, stop: 1 #f3a90f);
+background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: .01 #f22c2c, stop: .1 #f22c2c, stop: .95 #f22c2c, stop: 1 #f22c2c);
 }
 
 QWidget#PrivacyDialog QPushButton:focus {
