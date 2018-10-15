@@ -2177,6 +2177,7 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
     return ret;
 }
 
+//Developed by TFinch
 //Treasury blocks start from 50,000 and then 1440 blocks after/ 1440 is 1 day equivalent
 int nStartTreasuryBlock = 50000; // live dev fee 
 int nTreasuryBlockStep = 1440;   // 60*24
@@ -2193,19 +2194,18 @@ int64_t GetTreasuryAward(int nHeight)
 {
 	// LIVE REWARDS
     if (IsTreasuryBlock(nHeight)) {
-        return COIN * 17280; //10 coins go to stakers per day 17280 on first block
     } else if (nHeight <= 100000 && nHeight > 50000) { 
-        return COIN * 17280; //								// (1,440 * BlockRewards(120) ) * .1 = 17280 per day
+        return COIN * 17280; //					// (1,440 * BlockRewards(120) ) * .1 = 17280 per day
     } else if (nHeight <= 400000 && nHeight > 100000) { 
         return COIN * 8640;  //10 coins go to stakers  		// (1,440 * BlockRewards(60) ) * .1 = 8640 per day 
 	} else if (nHeight <= 1600000 && nHeight > 400000) { 
         return COIN * 4320;  //10 coins go to stakers  		// (1,440 * BlockRewards(30) ) * .1 = 4320 per day 
-    } else if (						 nHeight > 1600000) {	
+    } else if (nHeight > 1600000) {	
         return COIN * 2160;//10 coins go to stakers    		// (1,440 * BlockRewards(15) ) * .1 = 2160 per day 
-    } else {
-    }
-    return 0;	
-		
+        } else {
+            return 17280;
+        }
+    } else return 0;
 }
 
 
