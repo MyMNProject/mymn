@@ -2203,7 +2203,7 @@ int64_t GetTreasuryAward(int nHeight)
         } else if (						 nHeight > 1600000) {	
             return COIN * 2160;//10 coins go to stakers    		// (1,440 * BlockRewards(15) ) * .1 = 2160 per day 
         } else {
-            17280
+            17280;
         }
     } else 
         return 0;	
