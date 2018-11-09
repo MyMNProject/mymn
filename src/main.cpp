@@ -6272,9 +6272,16 @@ int ActiveProtocol()
     // SPORK_15 is used for 70911. Nodes < 70911 don't see it and still get their protocol version via SPORK_14 and their
     // own ModifierUpgradeBlock()
 
-    if (IsSporkActive(SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2))
-            return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
-    return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
+    // original active code
+    //if (IsSporkActive(SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2))
+     //       return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
+    //return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
+
+    // will activate upgrade at block 99k before 100k
+    if(chainActive.Height() >= SOFT_FORK_VERSION_100)
+        return MIN_PEER_PROTO_VERSION_DEVFEESFIX_UPGRADE;
+    
+    return MIN_PEER_PROTO_VERSION;
 }
 
 // requires LOCK(cs_vRecvMsg)
