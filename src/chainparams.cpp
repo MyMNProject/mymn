@@ -167,8 +167,8 @@ public:
         hashGenesisBlock = genesis.GetHash();
 
 			
-		printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
-        printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
+		//printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+        //printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
         assert(hashGenesisBlock == uint256("0x21175c6c7c8336f004afa19988f9e597be75d71bd2e116eb460b5b789122705d"));
         assert(genesis.hashMerkleRoot == uint256("0xe6d4c84eecc634caec7d935cba024242edcea67e99887cb3124250ea4cb043b8"));
       
@@ -272,7 +272,7 @@ public:
         genesis.nNonce = 526390;
 
 	    hashGenesisBlock = genesis.GetHash();
-		printf("test - genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+		//printf("test - genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
         //printf("test - genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
         assert(hashGenesisBlock == uint256("0x84a5d84b7537f61abfba786697dd73eaa98f19b520cd661ad31e488116a8d6f4"));
 		//assert(genesis.hashMerkleRoot == uint256("0xe6d4c84eecc634caec7d935cba024242edcea67e99887cb3124250ea4cb043b8"));
