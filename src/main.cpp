@@ -2194,7 +2194,7 @@ int64_t GetTreasuryAward(int nHeight)
 	// LIVE REWARDS - treasury mechanism developed by Tfinch :D
     if (IsTreasuryBlock(nHeight)) {
         
-        if (nHeight <= 100000 && nHeight > 50000) { 
+        if (nHeight <= 100000 && nHeight >= 50000) { 
             return COIN * 17280; //								// (1,440 * BlockRewards(120) ) * .1 = 17280 per day
         } else if (nHeight <= 400000 && nHeight > 100000) { 
             return COIN * 8640;  //10 coins go to stakers  		// (1,440 * BlockRewards(60) ) * .1 = 8640 per day 
