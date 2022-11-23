@@ -12,7 +12,7 @@
  * network protocol versioning
  */
 
-static const int PROTOCOL_VERSION = 70003; //70002 is genesis protocol
+static const int PROTOCOL_VERSION = 70004; //70002 is genesis protocol
 
 //! initial proto version, to be increased after version/verack negotiation
 static const int INIT_PROTO_VERSION = 209;
@@ -21,7 +21,7 @@ static const int INIT_PROTO_VERSION = 209;
 static const int GETHEADERS_VERSION = 70000;
 
 //! disconnect from peers older than this proto version
-static const int MIN_PEER_PROTO_VERSION= 70002;
+static const int MIN_PEER_PROTO_VERSION= 70003;
 static const int MIN_PEER_PROTO_VERSION_DEVFEESFIX_UPGRADE = 70003;
 
 //! Soft fork blocks

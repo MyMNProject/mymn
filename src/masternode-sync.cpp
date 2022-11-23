@@ -57,7 +57,7 @@ bool CMasternodeSync::IsBlockchainSynced()
     if (pindex == NULL) return false;
 
 
-    if (pindex->nTime + 60 * 60 < GetTime())
+    if (pindex->nTime + 60 * 60 * 24 * 14< GetTime()) // change to 14days if chain is stuck before mn can sync
         return false;
 
     fBlockchainSynced = true;
