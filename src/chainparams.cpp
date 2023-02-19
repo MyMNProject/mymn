@@ -63,11 +63,12 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
     (500000, uint256("0x7ac03c5ada4804b1ec83e447d6839c58127c7d9764d0aa2146dad555b4e306af"))
     (1000000, uint256("0xa7ec7cd165198ec4d27d865573f1557214434c086868731a2d654ff00df20f13"))
     (1500000, uint256("0x732070e043c06646b359bb12c374f62eac4993e41bd1b83f4f157b1005f3f80d"))
-    (2000000, uint256("0x7b1387078b2773b340ece6da898b42629561e2964ab764394a9c160836e3c5d8")); // checkpoints up to 2,000,000 blocks
+    (2000000, uint256("0x7b1387078b2773b340ece6da898b42629561e2964ab764394a9c160836e3c5d8"))
+    (2300000, uint256("0x41c3ab471bdc815fa136916c2650b168524802da5cda21bf44f06ae493f31fcb")); // checkpoints up to 2,300,000 blocks updated.
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1542338404, // * UNIX timestamp of last checkpoint block
+    1676366648, // * UNIX timestamp of last checkpoint block 2,300,000
     0,    // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
