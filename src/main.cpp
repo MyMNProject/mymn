@@ -2147,7 +2147,7 @@ int64_t GetBlockValue(int nHeight)
 		}else if (                     nHeight > 1600000) { 
 			nSubsidy = 15 * COIN;  // final reward is 15 coins to max supply which is aprox.  block 4132847.
         }
-        else if (                      nHeight > 2330000) // will trigger at this point
+        else if (                      nHeight > 2330000) {// will trigger at this point
             nSubsidy = 2 * COIN;  // final reward is changed to 2 coins to max supply to slow down the rate of chain hitting max supply.
 		}
 		int64_t nMoneySupply = chainActive.Tip()->nMoneySupply;
