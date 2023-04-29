@@ -2144,11 +2144,11 @@ int64_t GetBlockValue(int nHeight)
 			nSubsidy = 60 * COIN; // reward is 60 coins
 		}else if (nHeight <= 1600000 && nHeight > 400000) { 
 			nSubsidy = 30 * COIN; // reward is 30 coins
-		}else if (                     nHeight > 1600000) { 
-			nSubsidy = 15 * COIN;  // final reward is 15 coins to max supply which is aprox.  block 4132847.
+		}else if (nHeight <= 2400000 && nHeight > 1600000) { 
+			nSubsidy = 15 * COIN;  // reward is 15 coins
         }
-        else if (                      nHeight > 2330000) {// will trigger at this point
-            nSubsidy = 2 * COIN;  // final reward is changed to 2 coins to max supply to slow down the rate of chain hitting max supply.
+        else if (nHeight > 2400000) {// will trigger at this point
+            nSubsidy = 1 * COIN;  // final reward is changed to 2 coins to max supply to slow down the rate of chain hitting max supply.
 		}
 		int64_t nMoneySupply = chainActive.Tip()->nMoneySupply;
 
@@ -2205,8 +2205,8 @@ int64_t GetTreasuryAward(int nHeight)
             return COIN * 4320;  //10 coins go to stakers  		// (1,440 * BlockRewards(30) ) * .1 = 4320 per day 
         } else if (						 nHeight > 1600000) {	
             return COIN * 2160;//10 coins go to stakers    		// (1,440 * BlockRewards(15) ) * .1 = 2160 per day 
-        } else if (						 nHeight > 2330000) {	
-            return COIN * 288;//10 coins go to stakers    		// (1,440 * BlockRewards(2) ) * .1 = 2160 per day 
+        } else if (						 nHeight > 2400000) {	
+            return COIN * 1;//10 coins go to stakers    		// minimize prevention of reaching max supply 
         } else {
             17280;
         }

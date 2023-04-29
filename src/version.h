@@ -12,7 +12,7 @@
  * network protocol versioning
  */
 
-static const int PROTOCOL_VERSION = 70005; //70002 is genesis protocol
+static const int PROTOCOL_VERSION = 70006; //70002 is genesis protocol
 
 //! initial proto version, to be increased after version/verack negotiation
 static const int INIT_PROTO_VERSION = 209;
